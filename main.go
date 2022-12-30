@@ -1,18 +1,22 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"strings"
+)
 
-func mutiply(a int , b int) int {
-
-	return a * b
+func lenAndUpper(name string)(int, string){
+return len(name), strings.ToUpper(name)
+}
+func repeatMe(words ...string){
+	fmt.Println(words)
 }
 
+
+
 func main() {
-	fmt.Println(mutiply(2, 2))
-// 	age := 23
-// 	na := "Ko"
-// var name string = "Nico"
-// name = "Lyin"
-// fmt.Println(age, na)
-// fmt.Println(name)
+	totalLength, upperName := lenAndUpper("nico")
+	fmt.Println(totalLength, upperName)
+	fmt.Println((lenAndUpper("Nico")))
+	repeatMe("nico", "Kim")
 }
