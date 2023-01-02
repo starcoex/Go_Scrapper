@@ -3,12 +3,14 @@ package main
 import "fmt"
 
 func canIDrink(age int) bool {
-	if koreaAge := age + 2; koreaAge < 18 {
-		fmt.Println(koreaAge)
+	switch {
+	case age < 10:
 		return false
-	} else {
+	case age > 18:
 		return true
+
 	}
+	return true
 }
 
 func main() {
